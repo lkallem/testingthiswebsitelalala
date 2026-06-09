@@ -1,0 +1,20 @@
+title: "MoSAIC P-38"
+subtitle: "Modular System for Acceleration Integration"
+description: "A multi-tiled architecture for fast exploration of message-driven computation developed at Lawrence Berkeley National Laboratory."
+url: "https://lbnlcomputerarch.github.io"
+baseurl: "/MoSAIC-P38"
+
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+author: "Lawrence Berkeley National Laboratory"
+logo: "/assets/images/lbnl-logo.svg"
+show_sidebar: false
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+sass:
+  style: :compressed

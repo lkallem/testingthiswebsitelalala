@@ -1,0 +1,43 @@
+---
+---
+// LBNL Official Visual Identity Specifications
+$lbnl-dark-blue:  #00313C; // PMS 547 (Primary Brand Base)
+$lbnl-teal:       #007681; // PMS 7474 (Interaction/Links)
+$lbnl-light-gray: #B1B3B3; // PMS Cool Gray 5 (Borders/Dividers)
+$lbnl-dark-gray:  #63666A; // PMS Cool Gray 10 (Body Copy Accent)
+$lbnl-bright-grn: #84BD00; // PMS 376 (Hover Accents)
+
+// Bulma Engine Framework Overrides
+$primary:           $lbnl-teal;
+$link:              $lbnl-teal;
+$link-hover:        darken($lbnl-teal, 10%);
+$dark:              $lbnl-dark-blue;
+$text:              #212529; 
+$border:            $lbnl-light-gray;
+
+// Typography Directives
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-family:            $font-family-sans-serif;
+$title-family:           $font-family-sans-serif;
+
+// Columbia ESP Navbar Emulation Rules
+$navbar-background-color:           $lbnl-dark-blue;
+$navbar-item-color:                 #ffffff;
+$navbar-item-hover-color:           $lbnl-bright-grn;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color:          #ffffff;
+$navbar-item-img-max-height:        3.0rem;
+
+@import "main";
+
+// Code and Syntax Highlighting Adjustments
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #f8f9fa;
+  border: 1px solid $lbnl-light-gray;
+  border-radius: 4px;
+  color: #d33939;
+}
+pre code {
+  color: #212529;
+}
