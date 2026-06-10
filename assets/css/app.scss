@@ -1,55 +1,140 @@
 ---
 ---
-/* LBNL Official Visual Identity Specifications */
+/* LBNL Official Visual Identity */
 :root {
-  --lbnl-dark-blue: #00313C;
-  --lbnl-teal: #007681;
+  --lbnl-dark-blue:  #00313C;
+  --lbnl-teal:       #007681;
+  --lbnl-teal-dark:  #005d68;
   --lbnl-light-gray: #B1B3B3;
-  --lbnl-dark-gray: #63666A;
+  --lbnl-dark-gray:  #63666A;
   --lbnl-bright-grn: #84BD00;
 }
 
-/* Bulma Overrides */
-.button.is-primary, .tag.is-primary, .title.is-primary, .subtitle.is-primary {
-  background-color: var(--lbnl-teal) !important;
-  color: #fff !important;
+/* ── Navbar ────────────────────────────────────────────────── */
+.navbar {
+  background-color: var(--lbnl-dark-blue) !important;
+  box-shadow: none !important;
 }
 
+.navbar-item,
+.navbar-link {
+  color: #ffffff !important;
+  background-image: none !important;
+}
+
+.navbar-item:hover,
+.navbar-item:focus,
+.navbar-link:hover {
+  color: var(--lbnl-bright-grn) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.navbar-item.is-active {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.navbar-burger span {
+  background-color: #ffffff !important;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.button {
+  background-image: none !important;
+}
+
+.button.is-primary,
+.button.is-link {
+  background-color: var(--lbnl-teal) !important;
+  border-color: var(--lbnl-teal) !important;
+  color: #ffffff !important;
+  background-image: none !important;
+}
+
+.button.is-primary:hover,
+.button.is-link:hover {
+  background-color: var(--lbnl-teal-dark) !important;
+  border-color: var(--lbnl-teal-dark) !important;
+}
+
+.button.is-dark {
+  background-color: var(--lbnl-dark-blue) !important;
+  border-color: var(--lbnl-dark-blue) !important;
+  color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* ── Tags ──────────────────────────────────────────────────── */
+.tag.is-primary {
+  background-color: var(--lbnl-teal) !important;
+  color: #ffffff !important;
+}
+
+.tag.is-dark {
+  background-color: var(--lbnl-dark-blue) !important;
+  color: #ffffff !important;
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
 a {
   color: var(--lbnl-teal);
 }
 
 a:hover {
-  color: #005d68; /* darken(teal) */
+  color: var(--lbnl-teal-dark);
 }
 
-.navbar {
+/* ── Headings ──────────────────────────────────────────────── */
+.title {
+  color: var(--lbnl-dark-blue);
+}
+
+.subtitle {
+  color: var(--lbnl-dark-gray);
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero.is-primary,
+.hero.is-link {
   background-color: var(--lbnl-dark-blue) !important;
+  background-image: none !important;
 }
 
-.navbar-item {
+.hero.is-primary .title,
+.hero.is-link .title {
   color: #ffffff !important;
 }
 
-.navbar-item:hover {
+.hero.is-primary .subtitle,
+.hero.is-link .subtitle {
+  color: var(--lbnl-light-gray) !important;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+footer.footer {
+  background-color: var(--lbnl-dark-blue) !important;
+  background-image: none !important;
+  color: var(--lbnl-light-gray) !important;
+}
+
+footer.footer a {
   color: var(--lbnl-bright-grn) !important;
-  background-color: transparent !important;
 }
 
-.navbar-item.is-active {
-  color: #ffffff !important;
+/* ── Boxes / Cards ─────────────────────────────────────────── */
+.box {
+  box-shadow: none;
+  border: 1px solid var(--lbnl-light-gray);
 }
 
+/* ── Typography ────────────────────────────────────────────── */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   color: #212529;
 }
 
-.border {
-  border-color: var(--lbnl-light-gray);
-}
-
-/* Code and Syntax Highlighting */
+/* ── Code ──────────────────────────────────────────────────── */
 pre, code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
   background-color: #f8f9fa !important;
@@ -60,4 +145,6 @@ pre, code {
 
 pre code {
   color: #212529 !important;
+  background-color: transparent !important;
+  border: none !important;
 }
